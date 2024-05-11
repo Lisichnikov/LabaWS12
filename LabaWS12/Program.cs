@@ -6,7 +6,7 @@ internal class Program
         Console.WriteLine("Введите строку для поиска корректного IP-адреса: ");
         string strng = Console.ReadLine();
 
-        Regex regex = new Regex(@"\b(?:\d{1,3}\.){3}\d{1,3}\b");
+        Regex regex = new Regex(@"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b");
         MatchCollection matches = regex.Matches(strng);
 
         foreach (Match match in matches)
